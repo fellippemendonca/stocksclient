@@ -9,11 +9,11 @@ class ItemLister extends React.Component {
  		 this.state={ items:[] };
   }
   componentDidMount(){
-    setInterval(()=>{
-      fetch('/api/stocks')
+    //setInterval(() => {
+      fetch(`/api/stocks`)
       .then(result=>result.json())
       .then(items=>this.setState({items}))
-    }, 1000);
+    //}, 2000);
     
   }
   render() {
@@ -49,12 +49,3 @@ ReactDOM.render(
   <ItemLister/>,
   document.getElementById('root')
 );
-
-
-/*
-<div class="table-title">
-        <h3>Data Table</h3>
-      </div>
-
-      <th class="text-left">{item.name}</th><th class="text-left">{item.currentPrice}</th>
-*/
