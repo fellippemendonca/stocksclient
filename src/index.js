@@ -10,7 +10,7 @@ class ItemLister extends React.Component {
   }
   componentDidMount(){
     //fetch('http://jsonplaceholder.typicode.com/posts')
-    fetch('http://localhost:3001/api/stocks')
+    fetch('/api/stocks')
     .then(result=>result.json())
     .then(items=>this.setState({items}))
   }
